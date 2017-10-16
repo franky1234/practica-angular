@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Practice Angular';
+  statusSearch: boolean;
+  constructor() {
+    this.statusSearch = false;
+  }
+  onSearchOption(): void {
+    this.statusSearch = !this.statusSearch;
+  }
 }
