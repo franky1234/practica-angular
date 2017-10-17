@@ -1,0 +1,10 @@
+.not-found {
+  width: 22%;
+  text-align: center;
+}
+
+.centering-login-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

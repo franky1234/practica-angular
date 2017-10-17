@@ -1,0 +1,47 @@
+<div class="centering-login-card">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Welcome to Angular login page</mat-card-title>
+    </mat-card-header>
+    <div class="orientation-image-logo">
+      <img mat-card-image src="../../../assets/login_logo.svg" alt="angular icon">
+    </div>
+    <mat-card-content>
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput 
+            placeholder="Enter your username" 
+            [(ngModel)]="userInfo.username" 
+            name="username"
+          >
+          <mat-icon matSuffix>account_box</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput 
+            placeholder="Enter your password" 
+            [(ngModel)]="userInfo.password" 
+            name="password"
+            type="password"
+          >
+          <mat-icon matSuffix>keyboard</mat-icon>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="button-sing-in">
+        <button mat-raised-button 
+          color="primary"
+          (click)="verifyCredentials()"
+        >
+          Sign in
+        </button>
+      </div>
+      <div class="sign-up-option">
+        <span>
+          Don't you have an account? <a href="javascript:;"> Sign up </a>          
+        </span>
+      </div> 
+    </mat-card-actions>
+  </mat-card>
+</div>
