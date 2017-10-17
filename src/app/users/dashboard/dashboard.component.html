@@ -1,0 +1,19 @@
+<div *ngIf="user">
+  <span> 
+    <h2> Welcome :  {{ user.username }}</h2>
+  </span>
+  <mat-chip-list>
+    <mat-chip color="primary" selected="true">Skills</mat-chip>
+    <mat-chip color="primary" selected="true">Tournaments</mat-chip>
+    <mat-chip color="primary" selected="true">Courses</mat-chip>
+  </mat-chip-list>
+  <div class="button-go-back">
+    <button 
+      mat-fab 
+      color="primary"
+      (click)="goBackLogin()"
+    >
+      Back
+    </button>
+  </div>
+</div>

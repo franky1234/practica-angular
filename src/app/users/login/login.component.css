@@ -1,0 +1,42 @@
+.example-card {
+  width: 600px;
+}
+
+.centering-login-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-header-image {
+  background-image: url('https://cdn-images-1.medium.com/max/800/1*8lKzkDJVWuVbqumysxMRYw.png');
+  background-size: cover;
+}
+
+.mat-card-image {
+  width: 30%;
+}
+
+.orientation-image-logo {
+  text-align: center;
+
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 50%;
+  left: 25%;
+}
+
+.button-sing-in {
+  text-align: center;
+}
+
+.sign-up-option {
+  font-size: 12px;
+  text-align: right;
+}

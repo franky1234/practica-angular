@@ -5,3 +5,6 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.mat-input-element.mat-form-field-autofill-control {
+  background-color: #7986CB;
+}

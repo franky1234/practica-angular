@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 
+import { UsersModule } from './users/users.module';
+import { NotFoundModule } from './not-found/not-found.module';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +16,9 @@ import { MaterialModule } from './material/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    UsersModule,
+    NotFoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]
