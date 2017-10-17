@@ -1,3 +1,10 @@
 .button-go-back {
   text-align: center;
 }
+.displaying-options {
+  display: flex;
+}
+.mat-fab.mat-accent {
+  background-color: #3f51b5;
+  font-size: 25px;
+}

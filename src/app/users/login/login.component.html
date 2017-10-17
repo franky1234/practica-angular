@@ -23,6 +23,7 @@
             [(ngModel)]="userInfo.password" 
             name="password"
             type="password"
+            (keyup.enter)="verifyCredentials()"
           >
           <mat-icon matSuffix>keyboard</mat-icon>
         </mat-form-field>
