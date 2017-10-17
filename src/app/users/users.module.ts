@@ -6,14 +6,17 @@ import { UsersService } from '../shared/services/users.service';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessageComponent } from './login/message/message.component';
+import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
-  declarations: [LoginComponent, DashboardComponent, MessageComponent],
+  declarations: [LoginComponent, DashboardComponent, MessageComponent, RegisterComponent],
   providers: [UsersService]
 })
 export class UsersModule { }
