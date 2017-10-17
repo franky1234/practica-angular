@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../shared/models/user';
-import { UsersService } from '../../shared/services/users.service';
+import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 
+import { UsersService } from '../../shared/services/users.service';
+import { MessageComponent } from './message/message.component';
+import { User } from '../../shared/models/user';
 
 @Component({
   selector: 'pa-login',
@@ -17,9 +19,18 @@ export class LoginComponent implements OnInit {
     password: ''
   };
   usersList: User[];
+  messageComponent: MessageComponent;
+  errorMessage = {
+    error: `Wrong username or password`,
+    toDo: `Try again`
+  };
+  constructor(
+      private userService: UsersService,
+      public router: Router,
+      public snackBarMessage: MatSnackBar) {
 
-  constructor(private userService: UsersService, public router: Router ) {
     this.usersList = this.userService.getUsers();
+    this.messageComponent = new MessageComponent(snackBarMessage);
   }
 
   ngOnInit() {
@@ -34,5 +45,6 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/dashboard', foundUser.id ]);
       return;
     }
+    this.messageComponent.onMessageSnackBar(this.errorMessage.error, this.errorMessage.toDo);
   }
 }

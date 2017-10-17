@@ -1,5 +1,6 @@
 <div *ngIf="user">
-  <span> 
+  <span class="displaying-options"> 
+    <button mat-fab disabled> <strong>{{ getFirstLetter() }}</strong></button>
     <h2> Welcome :  {{ user.username }}</h2>
   </span>
   <mat-chip-list>

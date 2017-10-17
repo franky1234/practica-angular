@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { UsersService } from '../shared/services/users.service';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MessageComponent } from './login/message/message.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MaterialModule,
     FormsModule
   ],
-  declarations: [LoginComponent, DashboardComponent],
+  declarations: [LoginComponent, DashboardComponent, MessageComponent],
   providers: [UsersService]
 })
 export class UsersModule { }

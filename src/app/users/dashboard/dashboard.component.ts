@@ -27,5 +27,7 @@ export class DashboardComponent implements OnInit {
   goBackLogin(): void {
     this.location.back();
   }
-
+  getFirstLetter(): string {
+    return this.user.username.charAt(0).toUpperCase();
+  }
 }
